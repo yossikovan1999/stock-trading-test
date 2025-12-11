@@ -1,0 +1,24 @@
+{
+  "name": "stocks-trading-test",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000s\u0000t\u0000o\u0000c\u0000k\u0000-\u0000t\u0000r\u0000a\u0000d\u0000i\u0000n\u0000g\u0000-\u0000t\u0000e\u0000s\u0000t\u0000\r\u0000 \u0000",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yossikovan1999/stock-trading-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/yossikovan1999/stock-trading-test/issues"
+  },
+  "homepage": "https://github.com/yossikovan1999/stock-trading-test#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
