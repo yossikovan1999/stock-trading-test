@@ -12,6 +12,8 @@ import {
   operateOnStock,
 } from "./services/stockMarketService.js";
 
+import analyzeMarketTrends from "./services/analyzerService.js";
+
 //===============================
 //      handleSearchStock
 //===============================
@@ -52,13 +54,16 @@ function handleInput(userInput) {
       handleSearchStock();
       break;
     case "2":
-       handlefilterStocksByPrice();
+      handlefilterStocksByPrice();
       break;
     case "3":
       handleOperateOnStock();
       break;
     case "4":
-        return false;  
+      console.log(analyzeMarketTrends());
+      break;
+    case "5":
+      return false;
   }
 
   return true;
@@ -82,6 +87,3 @@ function runApp() {
 
 runApp();
 
-
-// name: "BrightFuture Academy",
-//             id: "x7l2df9",

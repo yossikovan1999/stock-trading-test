@@ -1,6 +1,6 @@
 import readlineSync from "readline-sync";
 
-const validMenuInput = ["1", "2", "3", "4"]
+const validMenuInput = ["1", "2", "3", "4", "5"];
 
 //===============================
 //          print Menu
@@ -11,7 +11,8 @@ export function getMenuInput(){
     (1) search by id or name
     (2) show stocks above or below a given price
     (3) buy or sell a stock
-    (4) exit 
+    (4) analyze
+    (5) exit
     `
     
     

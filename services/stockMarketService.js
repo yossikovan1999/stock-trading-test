@@ -20,20 +20,26 @@ export function searchStock(identifier) {
   return result;
 }
 
-//====================================
-//         filterStocksByPrice
-//====================================
 
+//====================================
+//         filterAbove
+//===================================
 function filterAbove(price, stocks) {
   return stocks.filter((stock) => stock.currentPrice > price);
 }
 
+//====================================
+//         filterBelow
+//===================================
 function filterBelow(price, stocks) {
   return stocks.filter((stock) => {
     stock.currentPrice < price;
   });
 }
 
+//====================================
+//         filterStocksByPrice
+//===================================
 export function filterStocksByPrice(givenPrice, above) {
   const stocks = getStocksCopy();
 
@@ -54,7 +60,7 @@ export function filterStocksByPrice(givenPrice, above) {
 }
 
 //====================================
-//
+//         updateAllInCategory
 //====================================
 
 function updateAllInCategory(stocks, curStock, amount) {
@@ -74,7 +80,7 @@ function updateAllInCategory(stocks, curStock, amount) {
 }
 
 //======================================
-//
+//           handleSell
 //======================================
 function handleSell(stocks, curStock, quantity) {
   
@@ -88,7 +94,7 @@ function handleSell(stocks, curStock, quantity) {
 }
 
 //======================================
-//
+//             handleBuy
 //======================================
 function handleBuy(stocks, curStock, quantity) {
   
@@ -105,9 +111,14 @@ function handleBuy(stocks, curStock, quantity) {
 }
 
 //======================================
-//
+//           operateOnStock
 //======================================
 export function operateOnStock(operation, identifier) {
+  
+  if(operation.toUpperCase() !== "BUY" && operation.toUpperCase() !== "SELL"){
+        throw new Error("You must enter Buy OR Sell only!");
+  }
+  
   //get the quantity from the user.
   const quantity = getQuantity();
 
